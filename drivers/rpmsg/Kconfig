@@ -56,6 +56,11 @@ config HAVE_IMX_RPMSG
 	select RPMSG
 	select RPMSG_VIRTIO
 
+config IMX_VIRTIO_RPMSG_BUS
+     tristate "IMX RPMSG virtio rpmsg bus -- lodable modules only"
+     default m
+     depends on RPMSG && m
+
 config IMX_RPMSG_PINGPONG
 	tristate "IMX RPMSG pingpong driver -- loadable modules only"
 	default m
